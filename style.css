@@ -1,0 +1,92 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    background-color: black;
+    font-family: Tahoma;
+    text-align: center;
+    color: white;
+    letter-spacing: 8px;
+    font-style: bold;
+}
+
+.checked{
+    color: cyan;
+    letter-spacing: 1px;
+}
+
+.non-checked{
+    color: white;
+    letter-spacing: 1px;
+
+}
+
+.pictures{
+    border: 3px solid cyan;
+}
+
+
+
+
+
+
+
+
+
+.block {
+    position: relative;
+    /* margin: 300px auto 0; */
+    width: 308px;
+    height: 175px;
+    background: linear-gradient(0deg, #000, white);
+    /* #272727); */
+  }
+  
+ .block:before, .block:after {
+    content: '';
+    position: absolute;
+    left: -2px;
+    top: -2px;
+    /* background: linear-gradient(45deg, #fb0094, #0000ff, #00ff00,#ffff00, #ff0000, #fb0094, 
+      #0000ff, #00ff00,#ffff00, #ff0000); */
+      background: linear-gradient(45deg, cyan, white, cyan ,white, cyan , white, cyan ,white);
+    background-size: 400%;
+    width: calc(100% + 4px);
+    height: calc(100% + 4px);
+    z-index: -1;
+    animation: steam 20s linear infinite;
+  }
+  
+  @keyframes steam {
+    0% {
+      background-position: 0 0;
+    }
+    50% {
+      background-position: 400% 0;
+    }
+    100% {
+      background-position: 0 0;
+    }
+  }
+  
+  .block:after {
+    filter: blur(50px);
+  } 
+
+
+
+  .alert{
+      color: cyan;
+  }
+
+  .btn{
+      background-color: black;
+      color: cyan;
+      border: 2px solid white;
+      padding: 15px 30px;
+      margin: 10px;
+      border-radius: 10px;
+  }
